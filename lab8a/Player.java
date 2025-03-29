@@ -20,7 +20,23 @@ public class Player {
 
   // cards are ordered from small to large
   public void addCard(Card card) {
-
+    int min;
+    String temp;
+    cards.add(card);
+    for (int i = 0; i < cards.size() - 1; i++) {
+      int min = i;
+      for (int scan = i + 1; scan < cards.size(); scan++) {
+        if (cards.get(i).compareTo(cards.get(scan)) > 0) {
+          min = scan;
+        }
+      }
+      if (min != i) {
+        Card temp = cards.get(min);
+        cards.set(min, cards.get(i));
+        cards.set(i, temp);
+      }
+      }
+    }
   }
 
   // YOU CANNOT MODIFY THIS FUNCTION
