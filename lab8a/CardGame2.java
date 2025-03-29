@@ -1,6 +1,6 @@
 public class CardGame2 {
 
-  private Player[] players;	// players in this game
+  private Player[] players;    // players in this game
 
   // constructor
   public CardGame2(Player[] players) {
@@ -8,7 +8,11 @@ public class CardGame2 {
   }
 
   public void play() {
-    System.out.println(Player.getName()+"has cards:"+Player.getCards());
-
+    for (int round = 0; round < 5; round++) {
+      // 打印每个玩家当前手牌
+      for (Player player : players) {
+        System.out.print(player.getName() + " has cards: " + player.cards + "\n");
+      }
+    }
   }
 }
