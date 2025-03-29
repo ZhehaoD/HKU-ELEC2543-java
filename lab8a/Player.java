@@ -27,12 +27,10 @@ public class Player {
       for (int scan = i + 1; scan < cards.size(); scan++) {
         if (cards.get(i).compareTo(cards.get(scan)) > 0) {
           min = scan;
+          Card temp = cards.get(min);
+          cards.set(min, cards.get(i));
+          cards.set(i, temp);
         }
-      }
-      if (min != i) {
-        Card temp = cards.get(min);
-        cards.set(min, cards.get(i));
-        cards.set(i, temp);
       }
     }
   }
