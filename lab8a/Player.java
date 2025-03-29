@@ -4,7 +4,7 @@ public class Player {
 
   // NO MORE INSTANCE VARIABLE CAN BE DEFINED
   private String name;  // name of the player
-  private ArrayList<Card> cards; // cards the player has
+  protected ArrayList<Card> cards; // cards the player has
   private static MyRandom rnd = new MyRandom();
 
   // YOU CANNOT MODIFY THIS FUNCTION
