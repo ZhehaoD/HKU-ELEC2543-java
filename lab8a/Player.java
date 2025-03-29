@@ -13,6 +13,7 @@ public class Player {
     cards = new ArrayList<Card>();
   }
 
+
   // YOU CANNOT MODIFY THIS FUNCTION
   public String getName() {
     return name;
@@ -33,6 +34,7 @@ public class Player {
         cards.set(min, cards.get(i));
         cards.set(i, temp);
       }
+    }
   }
 
   // YOU CANNOT MODIFY THIS FUNCTION
@@ -48,3 +50,7 @@ public class Player {
     System.out.println(" has cards: " + cards);
   }
 }
+
+  public ArrayList<Card> getCards() {
+    return cards;
+  }

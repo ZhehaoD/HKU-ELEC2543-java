@@ -8,6 +8,7 @@ public class CardGame2 {
   }
 
   public void play() {
+    System.out.println(Player.getName()+"has cards:"+Player.getCards());
 
   }
 }
