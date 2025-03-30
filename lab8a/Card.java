@@ -18,10 +18,10 @@ public class Card {
         else if (this.rank.compareTo(c.rank) < 0) {
             return -1;
         }
-        else if (this.suit.compareTo(c.suit)> 0){
+        else if (this.suit.compareTo(c.suit)< 0){
             return 1;
         }
-        else if (this.suit.compareTo(c.suit) < 0) {
+        else if (this.suit.compareTo(c.suit) > 0) {
             return -1;
         }
         else{

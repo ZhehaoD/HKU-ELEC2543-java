@@ -8,7 +8,9 @@ public class MyRandom {
 
   public MyRandom() {
     rnd = new Random();
+    rnd.setSeed(0);
   }
+
 
   // generate a random integer from 1 to max
   public int nextInt(int max) {
