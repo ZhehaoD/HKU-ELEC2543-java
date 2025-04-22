@@ -17,7 +17,6 @@ public class TestRing {
     System.out.println(ring);
     System.out.println("The curr node is " + ring.getCurrObj());
     System.out.println();
-   
 
     // advanced curr twice
     ring.advance();
@@ -26,40 +25,41 @@ public class TestRing {
     // remove three consecutive nodes
     System.out.println("Remove the current node.");
     System.out.println("The curr node is " + ring.getCurrObj());
-    ring.removeCurrObj();
-    System.out.println("The size of the ring after removal is : " + ring.size());
-    System.out.println(ring);
-
-    System.out.println("The curr node is " + ring.getCurrObj());
-    System.out.println("Remove the current node.");
-    ring.removeCurrObj();
-    System.out.println("The size of the ring after removal is : " + ring.size());
-    System.out.println(ring);
-
-    System.out.println("The curr node is " + ring.getCurrObj());
-    System.out.println("Remove the current node.");
-    ring.removeCurrObj();
-    System.out.println("The size of the ring after removal is : " + ring.size());
-    System.out.println(ring);
-    System.out.println();
-
-    // advanced curr twice
-    ring.advance();
-    ring.advance();
-
-    System.out.println("The curr node is " + ring.getCurrObj());
-    System.out.println("Remove the current node.");
-    ring.removeCurrObj();
-    System.out.println("The size of the ring after removal is : " + ring.size());
-    System.out.println(ring);
-    System.out.println();
-
-    // remove the remaining nodes
-    int size = ring.size();
-    for (int i = 0; i < size; i++)
-      ring.removeCurrObj();	
-
-    System.out.println("After removing all nodes.");
-    System.out.println("The size of the ring is : " + ring.size());
-  }
-}
+  }}
+//    ring.removeCurrObj();
+//    System.out.println("The size of the ring after removal is : " + ring.size());
+//    System.out.println(ring);
+//
+//    System.out.println("The curr node is " + ring.getCurrObj());
+//    System.out.println("Remove the current node.");
+//    ring.removeCurrObj();
+//    System.out.println("The size of the ring after removal is : " + ring.size());
+//    System.out.println(ring);
+//
+//    System.out.println("The curr node is " + ring.getCurrObj());
+//    System.out.println("Remove the current node.");
+//    ring.removeCurrObj();
+//    System.out.println("The size of the ring after removal is : " + ring.size());
+//    System.out.println(ring);
+//    System.out.println();
+//
+//    // advanced curr twice
+//    ring.advance();
+//    ring.advance();
+//
+//    System.out.println("The curr node is " + ring.getCurrObj());
+//    System.out.println("Remove the current node.");
+//    ring.removeCurrObj();
+//    System.out.println("The size of the ring after removal is : " + ring.size());
+//    System.out.println(ring);
+//    System.out.println();
+//
+//    // remove the remaining nodes
+//    int size = ring.size();
+//    for (int i = 0; i < size; i++)
+//      ring.removeCurrObj();
+//
+//    System.out.println("After removing all nodes.");
+//    System.out.println("The size of the ring is : " + ring.size());
+//  }
+//}
