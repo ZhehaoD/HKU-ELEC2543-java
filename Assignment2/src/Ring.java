@@ -65,6 +65,19 @@ public class Ring {
     return curr.obj.toString();
   }
 
+  public void removeCurrObj(){
+    RingNode temp=head;
+    if(curr==head){
+      head=curr.next;
+    }else{
+      while (temp.next != curr) {
+        temp = temp.next;
+      }
+      temp.next = curr.next;
+      curr = curr.next;
+    }
+  }
+
   public void advance(){
     curr=curr.next;
   }
