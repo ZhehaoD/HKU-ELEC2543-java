@@ -68,14 +68,14 @@ public class Ring {
   public void removeCurrObj(){
     RingNode temp=head;
     if(curr==head){
-      head=curr.next;
+      head=head.next;
     }else{
       while (temp.next != curr) {
         temp = temp.next;
       }
-      temp.next = curr.next;
-      curr = curr.next;
     }
+    temp.next = curr.next;
+    curr = curr.next;
   }
 
   public void advance(){
