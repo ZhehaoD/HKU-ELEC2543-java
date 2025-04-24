@@ -4,6 +4,7 @@ public class Job {
     private int newid=id;
     private int served=0;
     private int origin;
+
     public Job(int servedTimeNeeded) {
         this.servedTimeNeeded = servedTimeNeeded;
         origin=servedTimeNeeded;
@@ -11,9 +12,14 @@ public class Job {
     }
 
     public int served(int servedTime) {
-        this.served=servedTimeNeeded - servedTime;
-        this.servedTimeNeeded-=servedTime;
-        return served;
+        if (servedTime > servedTimeNeeded) {
+            this.served += servedTime;
+            return servedTimeNeeded-servedTime;
+        } else {
+            this.served += servedTime;
+            this.servedTimeNeeded -= servedTime;
+            return servedTimeNeeded;
+        }
     }
 
     public String toString(){
