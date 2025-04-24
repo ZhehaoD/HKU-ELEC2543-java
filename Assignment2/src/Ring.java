@@ -92,4 +92,12 @@ public class Ring {
   public void advance(){
     curr=curr.next;
   }
+
+  public String getHead() {
+    return head.obj.toString();
+  }
+
+  public String getCurr() {
+    return curr.obj.toString();
+  }
 }

@@ -9,4 +9,9 @@ public class RRSimulation {
     System.out.println("The original job list is:");
     System.out.println(jobs);
   }
+
+  public void run(int unit){
+    System.out.println("Job being served: "+jobs.getHead());
+    jobs.served(unit);
+  }
 }
