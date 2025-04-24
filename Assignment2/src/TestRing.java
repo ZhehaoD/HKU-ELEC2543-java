@@ -55,9 +55,9 @@ public class TestRing {
 
     // remove the remaining nodes
     int size = ring.size();
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++) {
       ring.removeCurrObj();
-
+    }
     System.out.println("After removing all nodes.");
     System.out.println("The size of the ring is : " + ring.size());
   }

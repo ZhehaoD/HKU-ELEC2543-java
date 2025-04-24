@@ -49,6 +49,9 @@ public class Ring {
   }
 
   public int size(){
+    if(curr==null && head==null){
+      return 0;
+    }
     int size=1;
     RingNode curr = head;
     while (curr.next != head) {
@@ -67,8 +70,16 @@ public class Ring {
 
   public void removeCurrObj(){
     RingNode temp=head;
+    if (head.next==head){
+      head = curr = null;
+      return;
+    }
     if(curr==head){
+      while (curr.next != head) {
+        curr = curr.next;
+      }
       head=head.next;
+      curr.next=head;
     }else{
       while (temp.next != curr) {
         temp = temp.next;
