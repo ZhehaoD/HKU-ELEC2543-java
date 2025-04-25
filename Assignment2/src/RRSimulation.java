@@ -11,7 +11,10 @@ public class RRSimulation {
   }
 
   public void run(int unit){
-    System.out.println("Job being served: "+jobs.getHead());
-    jobs.served(unit);
+    Job curr=new Job(jobs.getHead());
+    System.out.println("Total units of time needed: " + jobs.getHead());
+
+    System.out.println("The current job list is: " + jobs);
+
   }
 }
