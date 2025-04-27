@@ -65,7 +65,7 @@ public class Ring {
     if(curr==null){
       curr=head;
     }
-    return curr.obj.toString();
+    return curr.obj;
   }
 
   public void removeCurrObj(){
@@ -93,11 +93,4 @@ public class Ring {
     curr=curr.next;
   }
 
-  public String getHead() {
-    return head.obj.toString();
-  }
-
-  public String getCurr() {
-    return curr.obj.toString();
-  }
 }

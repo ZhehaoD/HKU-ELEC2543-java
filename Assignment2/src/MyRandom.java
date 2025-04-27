@@ -6,7 +6,7 @@ public class MyRandom {
 
   public MyRandom() {
 //    rnd = new Random(180);
-    rnd = new Random(180);
+    rnd = new Random(0);
   }
 
   // generate a random integer from 1 to max

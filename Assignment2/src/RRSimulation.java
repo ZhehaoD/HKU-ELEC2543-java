@@ -1,5 +1,7 @@
+import java.util.ArrayList;
+
 public class RRSimulation {
- 
+
   // NO MORE INSTANCE VARIABLE CAN BE DEFINED
   private Ring jobs;
 
@@ -11,10 +13,27 @@ public class RRSimulation {
   }
 
   public void run(int unit){
-    Job curr=new Job(jobs.getHead());
-    System.out.println("Total units of time needed: " + jobs.getHead());
-
-    System.out.println("The current job list is: " + jobs);
+    int time=0;
+    while(jobs.getCurrObj()!=null) {
+      Object obj = jobs.getCurrObj();
+      Job curr = (Job) obj;
+      System.out.println("Job being served: " + curr);
+      int x=curr.served(unit);
+      time+=unit;
+      System.out.println("The current job list is: " + jobs);
+      if(x<=0){
+        System.out.println(curr+" is done.");
+        jobs.removeCurrObj();
+        System.out.println("The current job list is: " + jobs);
+      }else{
+        jobs.advance();
+      }
+      if(jobs.size()==0){
+        break;
+      }
+    }
+    System.out.println("All jobs finished after "+ time + " hours.");
 
   }
+
 }
