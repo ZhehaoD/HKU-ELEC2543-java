@@ -20,12 +20,12 @@ public class RRSimulation {
       System.out.println("Job being served: " + curr);
       int x=curr.served(unit);
       time+=unit;
-      System.out.println("The current job list is: " + jobs);
       if(x<=0){
         System.out.println(curr+" is done.");
         jobs.removeCurrObj();
         System.out.println("The current job list is: " + jobs);
       }else{
+        System.out.println("The current job list is: " + jobs);
         jobs.advance();
       }
       if(jobs.size()==0){

@@ -6,7 +6,7 @@ public class PascalTriangleDriver {
 
     int k=0;
     try { 
-      k = 10;
+      k = 6;
     } catch (Exception e) {
       System.out.println("You have to input an integer as argument.");
       System.exit(1);
